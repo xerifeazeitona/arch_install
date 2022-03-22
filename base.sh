@@ -36,7 +36,7 @@ echo root:unsafe_root | chpasswd
 
 ## common packages 
 #pulseaudio (comment if using pipewire)
-pacman -S --noconfirm grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools base-devel linux-headers avahi ntfs-3g sshfs btrfs-progs xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils man cups alsa-utils pulseaudio pavucontrol bash-completion openssh rsync reflector acpi acpi_call dnsmasq openbsd-netcat iptables-nft ipset firewalld flatpak nss-mdns acpid os-prober 
+pacman -S grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools base-devel linux-headers avahi ntfs-3g sshfs btrfs-progs xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils man cups alsa-utils pulseaudio pavucontrol bash-completion openssh rsync reflector acpi acpi_call dnsmasq openbsd-netcat iptables-nft ipset firewalld flatpak nss-mdns acpid os-prober 
 
 #pipewire (comment if using pulseaudio)
 #pacman -S --noconfirm grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools base-devel linux-headers avahi ntfs-3g sshfs btrfs-progs xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils man cups alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack bash-completion openssh rsync reflector acpi acpi_call dnsmasq openbsd-netcat iptables-nft ipset firewalld flatpak nss-mdns acpid os-prober 
