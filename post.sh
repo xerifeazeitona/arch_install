@@ -13,7 +13,7 @@ sudo reflector --country Canada --latest 5 --sort rate --save /etc/pacman.d/mirr
 # sudo firewall-cmd --reload
 
 # Install repo packages
-sudo pacman -S xorg-server xorg-xinit xorg-xsetroot xorg-xrandr libxss xwallpaper picom unclutter lsd tmux xclip firefox sxiv zathura zathura-pdf-mupdf mpv weechat yt-dlp jq fzf cmatrix ttf-font-awesome ttf-linux-libertine ttf-inconsolata ttf-roboto noto-fonts
+sudo pacman -S xorg-server xorg-xinit xorg-xsetroot xorg-xrandr libxss xwallpaper picom unclutter lsd tmux xclip firefox sxiv zathura zathura-pdf-mupdf mpv weechat yt-dlp jq fzf cmatrix ttf-font-awesome libertinus-font ttf-inconsolata ttf-roboto noto-fonts
 
 # Install suckless programs
 mkdir ~/repos && cd ~/repos
@@ -28,7 +28,10 @@ done
 cd ~/repos
 git clone https://github.com/xerifeazeitona/dots_n_scripts.git
 sudo cp dots_n_scripts/scripts/* /usr/local/bin/
-cp -r dots_n_scripts/dotfiles/* ~/
+cp dots_n_scripts/dotfiles/.* ~/ 2> /dev/null
+cp -r dots_n_scripts/dotfiles/.config ~/
 rm -rf dots_n_scripts
 
-printf "\e[1;32mDone! \n\e[0m"
+echo "startx" >> ~/.bashrc
+
+printf "\e[1;32mDone! Reboot the machine to log into the graphical enviroment. \n\e[0m"
