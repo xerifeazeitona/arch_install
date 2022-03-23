@@ -24,4 +24,11 @@ do
     cd $repo;make;sudo make install;cd ..
 done
 
+# deploy dotfiles and scripts
+cd ~/repos
+git clone https://github.com/xerifeazeitona/dots_n_scripts.git
+sudo cp dots_n_scripts/scripts/* /usr/local/bin/
+cp -r dots_n_scripts/dotfiles/* ~/
+rm -rf dots_n_scripts
+
 printf "\e[1;32mDone! \n\e[0m"
