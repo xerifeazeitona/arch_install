@@ -13,7 +13,7 @@ sudo reflector --country Canada --latest 5 --sort rate --save /etc/pacman.d/mirr
 # sudo firewall-cmd --reload
 
 # Install repo packages
-sudo pacman -S xorg-server xorg-xinit xorg-xsetroot xorg-xrandr libxss xwallpaper picom unclutter lsd tmux xclip firefox sxiv zathura zathura-pdf-mupdf mpv weechat yt-dlp cmatrix ttf-font-awesome ttf-linux-libertine ttf-inconsolata ttf-roboto noto-fonts
+sudo pacman -S xorg-server xorg-xinit xorg-xsetroot xorg-xrandr libxss xwallpaper picom unclutter lsd tmux xclip firefox sxiv zathura zathura-pdf-mupdf mpv weechat yt-dlp jq fzf cmatrix ttf-font-awesome ttf-linux-libertine ttf-inconsolata ttf-roboto noto-fonts
 
 # Install suckless programs
 mkdir ~/repos && cd ~/repos
@@ -23,3 +23,5 @@ do
     git clone git://git.suckless.org/$repo
     cd $repo;make;sudo make install;cd ..
 done
+
+printf "\e[1;32mDone! \n\e[0m"

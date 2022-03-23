@@ -82,4 +82,4 @@ echo korporal:unsafe_user | chpasswd
 usermod -aG users,wheel korporal
 sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers && visudo -c /etc/sudoers
 
-printf "\e[1;32mDone! Type exit, umount -R /mnt and reboot.\e[0m"
+printf "\e[1;32mDone! Type exit, umount -R /mnt and reboot.\n\e[0m"
