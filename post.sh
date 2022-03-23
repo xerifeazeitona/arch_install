@@ -32,6 +32,6 @@ cp dots_n_scripts/dotfiles/.* ~/ 2> /dev/null
 cp -r dots_n_scripts/dotfiles/.config ~/
 rm -rf dots_n_scripts
 
-echo "startx" >> ~/.bash_profile
+echo '[ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx' >> ~/.bash_profile
 
 printf "\e[1;32mDone! Reboot the machine to log into the graphical enviroment. \n\e[0m"
